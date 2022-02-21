@@ -1,0 +1,27 @@
+{
+  "name": "uniapp-mobile-uview-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fengdu555/uniapp-mobile-uview-ui.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fengdu555/uniapp-mobile-uview-ui/issues"
+  },
+  "homepage": "https://github.com/fengdu555/uniapp-mobile-uview-ui#readme",
+  "dependencies": {
+    "uview-ui": "^2.0.27"
+  },
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "sass-loader": "^12.6.0"
+  }
+}

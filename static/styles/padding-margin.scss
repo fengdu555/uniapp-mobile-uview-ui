@@ -1,0 +1,51 @@
+$marAndPad: 0,1,2,5,10,15,20; // 这个地方写需要的数值,四个方向都行，页面上class直接引入pl-1,pr-2,pt-10...
+$dimensions:("p":"padding", "m":"margin");
+$directions:("t":"top", "b":"bottom", "l":"left", "r":"right", "x":("left", "right"), "y":("top", "bottom"), "a":"");
+
+@each $dimKey,
+$dimVal in $dimensions {
+
+  @each $dirKey,
+  $dirVal in $directions {
+
+    @for $i from 1 through length($marAndPad) {
+      $size: nth($marAndPad, $i);
+
+      @if $dirKey=="x" {
+        $val1: nth($dirVal, 1);
+        $val2: nth($dirVal, 2);
+
+        .#{$dimKey}#{$dirKey}-#{$size} {
+          #{$dimVal}-#{$val1}:#{$size}px;
+          #{$dimVal}-#{$val2}:#{$size}px;
+        }
+
+      }
+
+      @else if $dirKey=="y" {
+        $val1: nth($dirVal, 1);
+        $val2: nth($dirVal, 2);
+
+        .#{$dimKey}#{$dirKey}-#{$size} {
+          #{$dimVal}-#{$val1}:#{$size}px;
+          #{$dimVal}-#{$val2}:#{$size}px;
+        }
+
+      }
+
+      @else if $dirKey=="a" {
+        .#{$dimKey}#{$dirKey}-#{$size} {
+          #{$dimVal}:#{$size}px;
+        }
+
+      }
+
+      @else {
+        .#{$dimKey}#{$dirKey}-#{$size} {
+          #{$dimVal}-#{$dirVal}:#{$size}px;
+        }
+      }
+
+    }
+  }
+}

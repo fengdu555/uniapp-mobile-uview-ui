@@ -1,0 +1,28 @@
+@import "./varibale.scss";
+@mixin color-theme($color){/*通过该函数设置字体颜色，后期方便统一管理；*/
+  color:$color;
+   
+  [data-theme="green"] & {
+    color:$color-primary-green;
+  }
+  [data-theme="red1"] & {
+    color:$color-primary-red;
+  }
+  [data-theme="blue"] & {
+    color:$color-primary-blue;
+  }
+}
+@mixin background-color-theme($color){/*通过该函数设置背景颜色，后期方便统一管理；*/
+  background-color:$color;
+   
+  [data-theme="green"] & {
+    background-color:$color-primary-green;
+  }
+  [data-theme="red"] & {
+    background-color:$color-primary-red;
+  }
+  [data-theme="blue"] & {
+    background-color:$color-primary-blue;
+  }
+}
+ 
